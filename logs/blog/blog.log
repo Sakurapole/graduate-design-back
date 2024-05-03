@@ -1,0 +1,88 @@
+2024-04-24 12:27:11.217 | http-nio-8000-exec-3raceId | INFO  | 69324 | http-nio-8000-exec-3 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：38e831e5714a48228ea6c6e7650c6c51
+【请求 URL】：http://127.0.0.1:8000/user/getUserInfo
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"70ca70a4-ed3d-4944-b7e0-326c952456aa","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】486ms
+2024-04-24 12:27:11.928 | http-nio-8000-exec-7raceId | INFO  | 69324 | http-nio-8000-exec-7 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：87c3ef13c1b54ed0871ad6a194b23a17
+【请求 URL】：http://127.0.0.1:8000/project/document/getDailyDocumentNum
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"70ca70a4-ed3d-4944-b7e0-326c952456aa","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】43ms
+2024-04-24 12:27:11.998 | http-nio-8000-exec-6raceId | INFO  | 69324 | http-nio-8000-exec-6 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：2ea2ef1494aa42a9936b145e4ef3595f
+【请求 URL】：http://127.0.0.1:8000/user/getUserHomeCardInfo
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"70ca70a4-ed3d-4944-b7e0-326c952456aa","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】113ms
+2024-04-24 12:27:14.892 | http-nio-8000-exec-10raceId | INFO  | 69324 | http-nio-8000-exec-10 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：521e82decf0341c3a2ad48964a6fc0d0
+【请求 URL】：http://127.0.0.1:8000/user/logout
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"70ca70a4-ed3d-4944-b7e0-326c952456aa","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】26ms
+2024-04-24 12:28:55.627 | http-nio-8000-exec-3raceId | WARN  | 69324 | http-nio-8000-exec-3 | com.alibaba.druid.pool.DruidAbstractDataSource.testConnectionInternal(DruidAbstractDataSource.java:1494) : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/design, version : 1.2.5, lastPacketReceivedIdleMillis : 103599
+2024-04-24 12:28:55.634 | http-nio-8000-exec-3raceId | WARN  | 69324 | http-nio-8000-exec-3 | com.alibaba.druid.pool.DruidAbstractDataSource.testConnectionInternal(DruidAbstractDataSource.java:1494) : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/design, version : 1.2.5, lastPacketReceivedIdleMillis : 103670
+2024-04-24 12:28:55.785 | http-nio-8000-exec-3raceId | INFO  | 69324 | http-nio-8000-exec-3 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：61cf15e7212540b2858d697c90245132
+【请求 URL】：http://127.0.0.1:8000/user/login
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"44","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】238ms
+2024-04-24 12:28:55.835 | http-nio-8000-exec-4raceId | INFO  | 69324 | http-nio-8000-exec-4 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：ba53cefb372240eb8ccd995564dbb5e0
+【请求 URL】：http://127.0.0.1:8000/user/getUserInfo
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】13ms
+2024-04-24 12:28:56.103 | http-nio-8000-exec-10raceId | INFO  | 69324 | http-nio-8000-exec-10 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：7c06e51c16ca4ea6bcc3c90410ab1702
+【请求 URL】：http://127.0.0.1:8000/project/document/getDailyDocumentNum
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】24ms
+2024-04-24 12:28:56.152 | http-nio-8000-exec-8raceId | INFO  | 69324 | http-nio-8000-exec-8 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：fe50edfc0c834c80bc4c0ac24fe75064
+【请求 URL】：http://127.0.0.1:8000/user/getUserHomeCardInfo
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】74ms
+2024-04-24 12:29:37.151 | http-nio-8000-exec-1raceId | INFO  | 69324 | http-nio-8000-exec-1 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：511fc0ff017d47a18eb8d7fed6826a8c
+【请求 URL】：http://127.0.0.1:8000/user/getUserInfo
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】28ms
+2024-04-24 12:29:37.523 | http-nio-8000-exec-5raceId | INFO  | 69324 | http-nio-8000-exec-5 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：af027b7fce4a4eee98093f79758ff760
+【请求 URL】：http://127.0.0.1:8000/project/document/getDailyDocumentNum
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】10ms
+2024-04-24 12:29:37.552 | http-nio-8000-exec-4raceId | INFO  | 69324 | http-nio-8000-exec-4 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：41633fb8f8004be9beb5810aa5b607df
+【请求 URL】：http://127.0.0.1:8000/user/getUserHomeCardInfo
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】38ms
+2024-04-24 12:29:41.932 | http-nio-8000-exec-6raceId | INFO  | 69324 | http-nio-8000-exec-6 | com.laityh.design.common.interceptor.RequestHandler.afterCompletion(RequestHandler.java:73) : 
+【request_id】：1925e0ff931c4e11bc2b8036239b7747
+【请求 URL】：http://127.0.0.1:8000/user/logout
+【请求 IP】：2.0.0.1
+【请求Header：】{"sec-fetch-mode":"cors","content-length":"2","referer":"http://localhost:5173/","sec-fetch-site":"cross-site","accept-language":"zh-CN,zh;q=0.9,en-CN;q=0.8,en;q=0.7","origin":"http://localhost:5173","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","host":"127.0.0.1:8000","connection":"keep-alive","wind-electricity-token":"093e8ee6-5862-4245-a79f-df509b88eac4","content-type":"application/json;charset=UTF-8","accept-encoding":"gzip, deflate, br, zstd","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36","sec-fetch-dest":"empty"}
+【请求参数】：{}
+【接口耗时：】1ms
+2024-04-24 20:27:23.418 | SpringApplicationShutdownHookraceId | INFO  | 69324 | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:2043) : {dataSource-1} closing ...
+2024-04-24 20:27:23.431 | SpringApplicationShutdownHookraceId | INFO  | 69324 | SpringApplicationShutdownHook | com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:2116) : {dataSource-1} closed
