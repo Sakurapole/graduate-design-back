@@ -1,13 +1,15 @@
 package com.laityh.design.service.impl;
 
 import cn.dev33.satoken.stp.StpUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.laityh.design.common.exceptions.CustomException;
 import com.laityh.design.common.utils.CopyUtil;
+import com.laityh.design.common.utils.TransformUtil;
 import com.laityh.design.entity.*;
-import com.laityh.design.entity.vo.LoginUserVo;
-import com.laityh.design.entity.vo.UserHomeCardInfoVo;
-import com.laityh.design.entity.vo.UserVo;
+import com.laityh.design.entity.vo.*;
 import com.laityh.design.mapper.*;
 import com.laityh.design.service.IUserService;
 import com.laityh.design.common.base.BaseServiceImpl;
@@ -15,8 +17,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 /**
@@ -67,11 +71,6 @@ public class UserServiceImpl extends BaseServiceImpl<UserVo, User> implements IU
     @Override
     public UserVo getUserInfo() {
         int userId = StpUtil.getLoginIdAsInt();
-//        log.info(userMapper.getUserInfo(userId).toString());
-//        QueryWrapper<User> wrapper = new QueryWrapper<>();
-//        wrapper.eq("id", userId);
-//        User user = userMapper.selectOne(wrapper);
-//        UserVo userVo = CopyUtil.copy(user, UserVo.class);
         UserVo userVo = userMapper.getUserInfo(userId);
         userVo.setTokenInfo(StpUtil.getTokenInfo());
         return userVo;
@@ -117,6 +116,77 @@ public class UserServiceImpl extends BaseServiceImpl<UserVo, User> implements IU
             list.add(new UserHomeCardInfoVo("部门管理员数", String.valueOf(userMapper.selectCount(userQueryWrapper))));
         }
         return list;
+    }
+
+    @Override
+    public PageResultVo<UserManagementInfoVo> getUserInfoByPagination(UserManagementInfoPageVo pageVo) {
+        int userId = StpUtil.getLoginIdAsInt();
+        User currentUser = userMapper.selectById(userId);
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.apply("u.role_id = ur.role_id and u.department_id = d.department_id");
+        if (currentUser.getRoleId() == 0) {
+            if (pageVo.getDepartmentName() != null && !pageVo.getDepartmentName().isEmpty()) {
+                wrapper.in("d.department_name", pageVo.getDepartmentName());
+            }
+            if (pageVo.getRoleName() != null && !pageVo.getRoleName().isEmpty()) {
+                wrapper.in("ur.role_name", pageVo.getRoleName());
+            }
+        } else {
+            wrapper.eq("u.department_id", currentUser.getDepartmentId());
+            wrapper.eq("u.role_id", 2);
+        }
+        Page<UserManagementInfoVo> page = new Page<>(pageVo.getPage(), pageVo.getPageSize());
+        IPage<UserManagementInfoVo> userManagementInfoVoIPage = userMapper.selectUserManagementInfo(page, wrapper);
+        PageResultVo<UserManagementInfoVo> resultVo = new PageResultVo<>();
+        resultVo.setTotal((int) userManagementInfoVoIPage.getTotal());
+        resultVo.setItems(userManagementInfoVoIPage.getRecords());
+        return resultVo;
+    }
+
+    @Override
+    public String updateUserInfoByAdmin(UserManagementInfoVo userManagementInfoVo) {
+        User user = CopyUtil.copy(userManagementInfoVo, User.class);
+        user.setDepartmentId(TransformUtil.transformDepartmentByName(userManagementInfoVo.getDepartmentName()));
+        user.setRoleId(TransformUtil.transformRoleByName(userManagementInfoVo.getRoleName()));
+        user.setUpdateTime(LocalDateTime.now());
+        int res = userMapper.updateById(user);
+        return res > 0 ? "更新成功" : "更新失败";
+    }
+
+    @Override
+    public String deleteUserInfoByAdmin(Integer userId) {
+        return userMapper.deleteById(userId) > 0 ? "删除成功" : "删除失败";
+    }
+
+    @Override
+    public User insertUserInfoByAdmin(UserAddRequestVo userAddRequestVo) {
+        User user = new User();
+        user.setUserName(userAddRequestVo.getUserName());
+        user.setComment("");
+        user.setMail(userAddRequestVo.getMail());
+        user.setPassword(userAddRequestVo.getPassword());
+        user.setRoleId(TransformUtil.transformRoleByName(userAddRequestVo.getUserRole()));
+        user.setDepartmentId(userAddRequestVo.getDepartmentId());
+        user.setCreateTime(LocalDateTime.now());
+        user.setUpdateTime(LocalDateTime.now());
+        if (userMapper.insert(user) == 0) {
+            user.setId(-2);
+        } else {
+            user.setId(-1);
+        }
+        return user;
+    }
+
+    @Override
+    public UserVo getUserInfoById(int id) {
+        UserVo userInfo = userMapper.getUserInfo(id);
+        userInfo.setTokenInfo(null);
+        return userInfo;
+    }
+
+    @Override
+    public List<UserVo> getAllDepartmentAdmin() {
+        return userMapper.getDepartmentAdminInfo();
     }
 }
 

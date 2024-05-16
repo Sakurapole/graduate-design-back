@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.laityh.design.common.DO.ApiResultDO;
 import lombok.SneakyThrows;
 import org.springframework.core.MethodParameter;
+import org.springframework.core.io.UrlResource;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -29,6 +31,10 @@ public class ResponseAdviceInterceptor implements ResponseBodyAdvice {
         if (body instanceof ApiResultDO) {
             return body;
         }
+        if (body instanceof UrlResource) {
+            return body;
+        }
+        System.out.println(body.getClass());
         return ApiResultDO.success(body);
     }
 }

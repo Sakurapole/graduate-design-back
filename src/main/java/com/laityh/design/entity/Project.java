@@ -27,7 +27,7 @@ public class Project {
     @TableField(value = "project_admin_id")
     private Integer projectAdminId;
 
-    @TableField(value = "projectStatus")
+    @TableField(value = "project_status")
     private Integer projectStatus;
 
     @TableField(value = "create_time")

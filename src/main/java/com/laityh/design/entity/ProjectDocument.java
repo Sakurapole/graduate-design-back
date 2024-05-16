@@ -25,7 +25,7 @@ public class ProjectDocument {
     private String documentPath;
 
     @TableField(value = "document_number_schedule")
-    private String documentNumberSchedule;
+    private Integer documentNumberSchedule;
 
     @TableField(value = "user_id")
     private Integer userId;

@@ -5,6 +5,8 @@ import com.laityh.design.common.base.IBaseService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.laityh.design.entity.vo.DepartmentVo;
 
+import java.util.List;
+
 /**
 * <p>
     *  服务类
@@ -14,5 +16,12 @@ import com.laityh.design.entity.vo.DepartmentVo;
 */
 public interface IDepartmentService extends IBaseService<DepartmentVo, Department> {
 
+    List<Department> getAllDepartment();
+
+    String updateDepartmentInfo(DepartmentVo departmentVo);
+
+    String deleteDepartment(Integer departmentId);
+
+    String insertDepartment(String departmentName);
 }
 
